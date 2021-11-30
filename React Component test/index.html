@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!--Babel compilateur de JS ES6-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React component test</title>
+</head>
+<body>
+    <!-- la div parent qui permet d'afficher le contenu du script JS c là ou on va appeler le lien reactdom-->
+    <div id="app">
+
+    </div>
+
+
+     <!-- tout le code dans script sera interprêté par babel-->
+    <script type="text/babel">
+        //React est un objet
+        class App extends React.Component{
+            render(){
+                return(
+                    //JSX JavascriptXML n'accepte qu'un seul élément parent <div>
+                    <div className="titre">
+                        <h1>Mon titre</h1>
+                    </div>
+
+
+                )  
+            }
+
+        }
+        //j'ai crée mon composant je v le renvoyer dans mon DOM via mon composant App que je v l'afficher dans l'élément id="app"
+        ReactDOM.render(<App />, document.getElementById('app'));
+
+    </script>
+
+</body>
+</html>
